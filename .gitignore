@@ -10,6 +10,7 @@
 # production build folders
 /client/build
 /api/build
+tsconfig.json
 
 # misc
 .DS_Store
