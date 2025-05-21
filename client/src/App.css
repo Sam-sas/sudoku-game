@@ -90,6 +90,14 @@ html {
   box-shadow: -1px 15px 43px -7px var(--highlight-color);
 }
 
+.light .pencil-box {
+  background-color: var(--input-bg);
+}
+
+.light .highlight {
+  background-color: var(--highlight-color);
+}
+
 .light .button,
 .light .tooltiptext {
   background-color: var(--input-bg);
@@ -154,6 +162,10 @@ html {
   background-color: var(--input-bg);
 }
 
+.dark .highlight {
+  background-color: var(--highlight-color);
+}
+
 .dark .button,
 .dark .tooltiptext {
   background-color: var(--input-bg);
@@ -207,6 +219,14 @@ html {
   box-shadow: -1px 15px 43px -7px var(--highlight-color);
 }
 
+.parchment .pencil-box {
+  background-color: var(--input-bg);
+}
+
+.parchment .highlight {
+  background-color: var(--highlight-color);
+}
+
 .parchment .button,
 .parchment .tooltiptext {
   background-color: #333333;
@@ -222,6 +242,69 @@ html {
 }
 
 .parchment .modal {
+  background-color: var(--bg-color);
+}
+
+/* Coriander Theme */
+.coriander {
+  --bg-color: theme("colors.coriander.200");
+  --text-color: theme("colors.coriander.800");
+  --button-text-color: theme("colors.coriander.100");
+  --input-bg: theme("colors.coriander.100");
+  --input-text: theme("colors.coriander.800");
+  --input-border: theme("colors.coriander.700");
+  --highlight-color: theme("colors.coriander.200");
+}
+
+.coriander * {
+  border-color: theme("colors.coriander.700");
+}
+
+.coriander #welcome-page {
+  background-color: rgba(207, 232, 174, 0.7);
+  background-blend-mode: lighten;
+}
+
+.coriander .hover-underline-animation::after {
+  background-color: var(--input-text);
+}
+
+.coriander .rules-card,
+.coriander .modal {
+  box-shadow: -1px 15px 43px -7px var(--input-border);
+}
+
+.coriander .pencil-box {
+  background-color: var(--input-bg);
+}
+
+.coriander .highlight {
+  background-color: var(--highlight-color);
+}
+
+.coriander .button,
+.coriander .tooltiptext {
+  background-color: theme("colors.coriander.700");
+  color: var(--button-text-color);
+  border-color: var(--highlight-color);
+  transition: background-color 0.3s ease;
+}
+
+.coriander .button:hover {
+  background: theme("colors.coriander.900");
+  border-color: theme("colors.coriander.700");
+  color: theme("colors.coriander.100");
+}
+
+.coriander .numpad .button:hover {
+  background: theme("colors.coriander.500");
+}
+
+.coriander button:hover svg {
+  color: theme("colors.coriander.500");
+}
+
+.coriander .modal {
   background-color: var(--bg-color);
 }
 
@@ -260,6 +343,14 @@ html {
   box-shadow: -1px 15px 43px -7px var(--highlight-color);
 }
 
+.cyberwave .pencil-box {
+  background-color: var(--input-bg);
+}
+
+.cyberwave .highlight {
+  background-color: var(--highlight-color);
+}
+
 .cyberwave .button,
 .cyberwave .tooltiptext {
   background-color: var(--input-bg);
@@ -269,72 +360,17 @@ html {
 }
 
 .cyberwave .button:hover {
-  background-color: rgba(57, 2, 60, 1);
-  color: rgba(207, 10, 162, 1);
+  background-color: var(--input-border);
+  color: var(--text-color);
   border-color: rgba(57, 2, 60, 1);
 }
 
 .cyberwave button:hover svg {
-  color: var(--input-border);
+  color:rgba(57, 2, 60, 1);
 }
 
 .cyberwave .modal {
   background: #05051d;
-}
-
-/* Coriander Theme */
-.coriander {
-  --bg-color: theme("colors.coriander.200");
-  --text-color: theme("colors.coriander.800");
-  --button-text-color: theme("colors.coriander.100");
-  --input-bg: theme("colors.coriander.100");
-  --input-text: theme("colors.coriander.800");
-  --input-border: theme("colors.coriander.700");
-  --highlight-color: theme("colors.coriander.200");
-}
-
-.coriander * {
-  border-color: theme("colors.coriander.700");
-}
-
-.coriander #welcome-page {
-  background-color: rgba(207, 232, 174, 0.7);
-  background-blend-mode: lighten;
-}
-
-.coriander .hover-underline-animation::after {
-  background-color: var(--input-text);
-}
-
-.coriander .rules-card,
-.coriander .modal {
-  box-shadow: -1px 15px 43px -7px var(--input-border);
-}
-
-.coriander .button,
-.coriander .tooltiptext {
-  background-color: theme("colors.coriander.700");
-  color: var(--button-text-color);
-  border-color: var(--highlight-color);
-  transition: background-color 0.3s ease;
-}
-
-.coriander .button:hover {
-  background: theme("colors.coriander.900");
-  border-color: theme("colors.coriander.700");
-  color: theme("colors.coriander.100");
-}
-
-.coriander .numpad .button:hover {
-  background: theme("colors.coriander.500");
-}
-
-.coriander button:hover svg {
-  color: theme("colors.coriander.500");
-}
-
-.coriander .modal {
-  background-color: var(--bg-color);
 }
 
 /* full-sun Theme */
@@ -352,8 +388,8 @@ html {
 }
 
 .full-sun #welcome-page {
-  background-color: rgba(185, 59, 19, 0.8);
-  background-blend-mode: lighten;
+  background-color: var( --bg-color);
+  background-blend-mode: color-dodge;
 }
 
 .full-sun .hover-underline-animation::after {
@@ -363,6 +399,14 @@ html {
 .full-sun .rules-card,
 .full-sun .modal {
   box-shadow: -1px 15px 43px -7px var(--highlight-color);
+}
+
+.full-sun .pencil-box {
+  background-color: var(--input-bg);
+}
+
+.full-sun .highlight {
+  background-color: var(--highlight-color);
 }
 
 .full-sun .button,

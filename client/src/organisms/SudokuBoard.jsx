@@ -14,17 +14,31 @@ const SudokuBoard = () => {
   const { pencilState } = usePencil();
   const isFirstRender = useRef(true);
 
-  useEffect(() => {
-    sudokuDispatch({ type: "SET_LOADING", payload: true });
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      gameVersionDispatch({
-        type: "SET_HAS_WON",
-        payload: false,
-      });
-      startNewGame();
+const hasStartedRef = useRef(false);
+
+useEffect(() => {
+  if (hasStartedRef.current) return;
+
+  hasStartedRef.current = true;
+
+  const startGame = async () => {
+    const hasStartedGame = sessionStorage.getItem("hasStartedGame");
+    if (!hasStartedGame) {
+      sessionStorage.setItem("hasStartedGame", "true");
+      sudokuDispatch({ type: "SET_LOADING", payload: true });
+      gameVersionDispatch({ type: "SET_HAS_WON", payload: false });
+
+      try {
+        await startNewGame(); // your async function
+      } catch (error) {
+        console.error("Failed to start game:", error);
+        sudokuDispatch({ type: "SET_LOADING", payload: false });
+      }
     }
-  }, []);
+  };
+
+  startGame();
+}, []);
 
   const selectCell = (boxIndex, innerBoxIndex, inputIndex) => {
     if (boxIndex && innerBoxIndex && (inputIndex || inputIndex === 0)) {

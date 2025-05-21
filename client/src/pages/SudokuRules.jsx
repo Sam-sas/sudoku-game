@@ -76,16 +76,20 @@ const SudokuRules = () => {
         <Card
           headingTitle={"Pencil Marks Are Your Friend"}
           imgSrc={basicPencil}
-          imgAlt={"pencil markings for 4 and 7 on the board"}
+          imgAlt={"pencil markings for 1, 2, and 3 on the board"}
         >
           <p className="pb-4">
             Sometimes you just can't tell what a number is for a given location.
             But you have a relative idea of what could go there. From the
-            example above for the top right box, we're not sure if it could be a
-            four or seven. But by placing markings here we can easily see what
-            to look for once we get back to this box. We won't have to remember
-            what to place there, since visually we can see what could go there.
-            Eases the process of elimination for other boxes as well.
+            example above for the top right box, we're not sure if a 1 would
+            work in a couple of places. By placing markings here we can easily
+            see what to look for once we get back to this box.
+          </p>
+
+          <p>
+            We won't have to remember what to place there, since visually we can
+            see what could go there. Eases the process of elimination for other
+            boxes as well.
           </p>
         </Card>
       </div>

@@ -93,7 +93,7 @@ const GameProgressChecker = ({ open, onClose, statusCheck }) => {
   };
 
   const startNew = () => {
-    startNewGame();
+    startNewGame(sudokuState.difficulty);
     onClose();
   };
 

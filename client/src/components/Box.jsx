@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useGameVersion, usePencil, useSudoku } from "../state-management/GlobalState";
-import { addHighlights, isSameLocation } from "../utils/Common";
+import { useEffect } from "react";
+import { usePencil, useSudoku } from "../state-management/GlobalState";
+import { addHighlights } from "../utils/Common";
 import PencilBox from "./PencilBox";
 
 const Box = ({ innerBoxArray, boxIndex, onFocus, onValueChange }) => {

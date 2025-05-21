@@ -37,7 +37,7 @@ export const addHighlights = (innerBoxIndex, sudokuState, boxIndex) => {
     );
 
     if (sameOuterBox || sameColumn || sameRow || isMatchingValue) {
-      return "bg-[var(--highlight-color)]";
+      return "highlight";
     }
   }
 
