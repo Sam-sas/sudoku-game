@@ -1,0 +1,32 @@
+TODO
+
+Basic layout
+Add sudoku generator -- done
+Add TypeScript -- done
+Add server.ts 
+Create routers for:
+    easy
+    medium
+    hard
+    expert
+    (these are all available difficulties from this set up -- see if you can add nightmare)
+
+Error Handling
+    Add error Handling
+    Add validator
+
+Connections
+Add connection to postgresSQL server
+Add connection to React
+
+Research
+Difference between tsx and ts
+How to add onto this soduku generator
+What is strictmode?
+
+
+
+Step 1:
+Get both environments running
+Get them talking to each other
+Get a basic board up, random is fine

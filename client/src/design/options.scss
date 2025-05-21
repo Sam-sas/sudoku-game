@@ -1,0 +1,117 @@
+.parchment .options {
+  .options-title {
+    .button {
+      background-color: transparent;
+      color: #333;
+    }
+  }
+}
+
+.coriander .options {
+  .options-title {
+    .button {
+      background-color: transparent;
+      color: #446823;
+    }
+  }
+}
+
+.options {
+  border-right: 2px solid black;
+  .options-title {
+    height: 4rem;
+    .button {
+      background-color: transparent;
+    }
+    svg {
+      width: 3.75rem;
+      height: 3.75rem;
+      cursor: pointer;
+    }
+    h2 {
+      position: absolute;
+      left: 5rem;
+    }
+    .button.sidebar-title {
+      border: none;
+      span {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+}
+
+.options.closed {
+  .buttons {
+    svg {
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: 1.55rem 0;
+       cursor: pointer;
+    }
+    .button {
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+    }
+    span {
+      width: 60px;
+    }
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .options {
+    border: none;
+  }
+
+  .options.closed {
+    .buttons {
+      svg {
+        width: 2.25rem;
+        height: 2.25rem;
+        margin: 0.75rem 0;
+      }
+      .button {
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+      }
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  .options.closed {
+     width: 5rem;
+    .buttons, .options-title {
+      svg {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1315px) {
+  .options {
+    .options-title {
+      h2 {
+        font-size: 1.875rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1385px) {
+  .options {
+    .options-title {
+      h2 {
+        left: 6rem;
+      }
+    }
+  }
+}

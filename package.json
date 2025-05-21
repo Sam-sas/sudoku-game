@@ -1,0 +1,20 @@
+{
+  "name": "sudoku",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "concurrently \"npm run api\" \"npm run client\"",
+    "api": "cd api && npx tsx ./routers/index.ts",
+    "client": "cd client && npm run start",
+    "build": "cd client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10"
+  }
+}
