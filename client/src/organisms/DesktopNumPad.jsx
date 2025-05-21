@@ -33,21 +33,26 @@ const DesktopNumPad = () => {
       const row = sudokuState.selectedCell.outerBoxLocation.row;
       const column = sudokuState.selectedCell.outerBoxLocation.column;
       const inputIndex = sudokuState.selectedCell.inputIndex;
-      sudokuDispatch({
-        type: "UPDATE_CELL",
-        payload: {
-          row,
-          column,
-          inputIndex,
-          value: 0,
-        },
-      });
+
+      const prefilled = sudokuState.prefilled.at(row).at(column).at(inputIndex);
+      
+      if (prefilled === 0) {
+        sudokuDispatch({
+          type: "UPDATE_CELL",
+          payload: {
+            row,
+            column,
+            inputIndex,
+            value: 0,
+          },
+        });
+      }
     }
   };
 
   return (
     <div className="numpad-portion flex flex-col items-center mx-6 motion-preset-slide-left">
-      { width > 1280 && <Heading title="Numpad" />}
+      {width > 1280 && <Heading title="Numpad" />}
       {width > 640 && <NumPad />}
       <div className="buttons flex flex-row pencil-markings mt-4 md:mt-2">
         <Button
