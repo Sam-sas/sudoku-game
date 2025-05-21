@@ -6,7 +6,9 @@ import { getSudoku } from 'sudoku-gen';
 const app = express();
 const port = 9000;
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000" , "https://sudoku-game-client-cb02.onrender.com"]
+}));
 app.use(express.json());
 
 type Level = 'easy' | 'medium' | 'hard' | 'expert';

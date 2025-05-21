@@ -2,7 +2,7 @@ import axios from "axios";
 import { turn2DArray } from "../utils/Common";
 
 //to be moved to env file
-const API_URL = "http://localhost:9000";
+const API_URL = "https://sudoku-game-client-cb02.onrender.com";
 
 const stringToGrid = (string) => {
   //Switch string into something readable for me
