@@ -1,7 +1,6 @@
-import React, { useReducer, createContext, useContext } from "react";
+import { useReducer, createContext, useContext } from "react";
 import {
   checkLocationExistence,
-  isSameLocation,
   turn2DArray,
 } from "../utils/Common";
 import { getGameDifficulty, getRandomGame } from "../calls/getGames";

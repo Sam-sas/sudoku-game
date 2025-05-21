@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //to be moved to env file
-const API_URL = "http://localhost:9000";
+const API_URL = "https://sudoku-game-api.onrender.com";
 
 const stringToGrid = (string) => {
  let newString = string.replace(/-/g, "0");
